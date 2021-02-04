@@ -2,7 +2,9 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-print("hello")
+def hi_from_me():
+    print("mvk")
+
 #############################################
 # GENERAL
 #############################################
