@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 
 def grab_col_names(dataframe, cat_th=10, car_th=20):
     """
-    grab_col_names for giving dataframe
+    grab_col_names for given dataframe
+
     :param dataframe:
     :param cat_th:
     :param car_th:
