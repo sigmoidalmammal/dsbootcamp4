@@ -9,15 +9,15 @@ import matplotlib.pyplot as plt
 
 def grab_col_names(dataframe, cat_th=10, car_th=20):
 
-    cat_cols = [col for col in dataframe.columns if dataframe[col].dtype == "O"]
+    cat_cols = [col for col in dataframe.columns if dataframe[col].dtypes == "O"]
 
-    num_but_cat = [col for col in dataframe.colmns if dataframe[col].nunique() < cat_th and
+    num_but_cat = [col for col in dataframe.columns if dataframe[col].nunique() < cat_th and
                    dataframe[col].dtypes != "O"]
 
     cat_but_car = [col for col in dataframe.columns if dataframe[col].nunique() > car_th and
                    dataframe[col].dtypes == "O"]
 
-    cat_cols = cat_sols + num_but_cat
+    cat_cols = cat_cols + num_but_cat
     cat_cols = [col for col in cat_cols if col not in cat_but_car]
 
     num_cols = [col for col in dataframe.columns if dataframe[col].dtypes != "O"]
